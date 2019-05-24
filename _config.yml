@@ -10,9 +10,13 @@ future: false
 #theme: jekyll-theme-slate
 permalink: /:categories/:title/
 #theme: jekyll-theme-leap-day
+remote_theme: mmistakes/minimal-mistakes
 
 markdown: kramdown
 #markdown: redcarpet
 highlighter: rouge
 #highlighter: pygments
 
+plugins:
+  - jekyll-feed
+  - jekyll-include-cache
