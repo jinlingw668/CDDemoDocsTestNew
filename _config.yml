@@ -20,3 +20,7 @@ highlighter: rouge
 plugins:
   - jekyll-feed
   - jekyll-include-cache
+  
+safe: true
+lsi: false
+source: ./CD/Cn
