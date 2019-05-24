@@ -9,7 +9,7 @@ future: false
 #baseurl: /_site
 #theme: jekyll-theme-slate
 permalink: /:categories/:title/
-theme: jekyll-theme-leap-day
+#theme: jekyll-theme-leap-day
 
 markdown: kramdown
 #markdown: redcarpet
