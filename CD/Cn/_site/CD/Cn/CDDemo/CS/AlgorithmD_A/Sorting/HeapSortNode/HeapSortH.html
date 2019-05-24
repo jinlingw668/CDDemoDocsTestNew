@@ -1,0 +1,31 @@
+<h3 id="堆排序算法-demo-操作要领"><center>堆排序算法 Demo 操作要领</center></h3>
+<div align="right">
+	<a href="/CD/Cn/CDDemo/CS/QandA.html" target="_blank">Q&amp;A</a>
+    &nbsp;&nbsp;
+	<a href="/CD/Cn/" target="_blank">Home</a>		
+</div>
+<hr />
+
+<h4 id="演示设置">演示设置</h4>
+
+<ol>
+  <li>使用 Op列 标识算法的阶段：
+    <ul>
+      <li>H - Heapify，建堆；</li>
+      <li>S - Sorting，排序；</li>
+    </ul>
+  </li>
+  <li>使用 二叉树 标识堆结构；</li>
+  <li>使用 Done列 标识子树建堆是否完成，对应参数 done；</li>
+  <li>使用 下标 标识元素的初始位置；</li>
+</ol>
+
+<h4 id="code参数">Code参数</h4>
+<ul>
+  <li>H[ ] - 输入数组，即线性表表示的堆；</li>
+  <li>n - 排序数组长度；</li>
+  <li>i - HeapSort排序函数的外层循环索引，取值 n-1~1；</li>
+  <li>j - Heapify建堆函数的循环索引，取值 n/2-1~0；</li>
+  <li>k - SiftDown调堆函数的循环索引，堆化以 k 为根的子树；</li>
+  <li>done - 标识子树堆化是否完成；</li>
+</ul>

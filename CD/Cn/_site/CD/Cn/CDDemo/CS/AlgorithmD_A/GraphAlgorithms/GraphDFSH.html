@@ -1,0 +1,49 @@
+<h3 id="深度优先搜索算法-demo-操作要领"><center>深度优先搜索算法 Demo 操作要领</center></h3>
+<div align="right">
+	<a href="/CD/Cn/CDDemo/CS/QandA.html" target="_blank">Q&amp;A</a>
+    &nbsp;&nbsp;
+	<a href="/CD/Cn/" target="_blank">Home</a>		
+</div>
+<hr />
+<h4 id="演示设置">演示设置</h4>
+
+<ol>
+  <li>使用<sup>m</sup>T<sub>n</sub>标识顶点v的访问顺序，其中
+    <ul>
+      <li>m - 顶点访问的前序顺序 ( preorder )，即首次访问到的顺序号；</li>
+      <li>n - 顶点访问的后序顺序 ( postorder )，即完成访问的顺序号；</li>
+    </ul>
+  </li>
+  <li>交互时不需考虑上下标，如“<sup>5</sup>T<sub>8</sub>”可直接输入“5T8”。</li>
+</ol>
+
+<h4 id="code参数">Code参数</h4>
+<ul>
+  <li>N - 顶点数；</li>
+  <li>v0 - 起点；</li>
+  <li>G - 图的邻接表；</li>
+  <li>Visited - 各顶点是否访问过，初始为false；</li>
+  <li>Order - 访问顶点的顺序号，从1开始编号；</li>
+  <li>PreOrder - 依次记录访问过程的前序顶点，初始为空；
+    <ul>
+      <li>v - 顶点号；</li>
+      <li>order - 对应顶点的前序遍历顺序号；</li>
+    </ul>
+  </li>
+  <li>PostOrder - 依次记录访问过程的后序顶点，初始为空；
+    <ul>
+      <li>v - 顶点号；</li>
+      <li>order - 对应顶点的后序遍历顺序号；</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="io">I/O</h4>
+<ul>
+  <li>Adjacency list - 各顶点的邻接表</li>
+  <li>Call Stack - DFS函数递归调用的栈记录，以“v”或“(v,u)”的形式
+    <ul>
+      <li>( v, u ) - ( 顶点，邻接点 )；</li>
+    </ul>
+  </li>
+</ul>

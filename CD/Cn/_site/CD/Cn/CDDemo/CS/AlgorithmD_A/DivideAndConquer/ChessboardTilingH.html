@@ -1,0 +1,53 @@
+<h3 id="棋盘覆盖算法-demo-操作要领"><center>棋盘覆盖算法 Demo 操作要领<center></center></center></h3>
+<div align="right">
+	<a href="/CD/Cn/CDDemo/CS/QandA.html" target="_blank">Q&amp;A</a>
+    &nbsp;&nbsp;
+	<a href="/CD/Cn/" target="_blank">Home</a>			
+</div>
+<hr />
+<h4 id="演示设置">演示设置</h4>
+<ol>
+  <li>使用Call Stack 记录算法递归调用的栈信息，以“No: (#Loc, rcpqs, TileNo)”的形式
+    <ul>
+      <li>No - 对应演示步骤No;</li>
+      <li>#Loc - 子函数调用的return point 返回点，以便返回后继续执行；
+        <ul>
+          <li>Loc标识代码行；</li>
+          <li>#Loc标识代码行地址；</li>
+        </ul>
+      </li>
+      <li>rcpqs - 子函数调用的参数(r, c, p, q, s)取值；</li>
+      <li>TileNo - 棋盘覆盖的L型骨牌计数；</li>
+    </ul>
+  </li>
+  <li>例如 n=2 (0,0)时
+    <ul>
+      <li>02: (#16,00004)
+        <ul>
+          <li>栈顶(#16,00004)对应步骤No2</li>
+          <li>函数ChessboardTiling(0,0,0,0,4)的返回点，是ChessBoardTilingCaller的#16代码行；</li>
+        </ul>
+      </li>
+      <li>04: (#16,00002,1)(#15,00002)
+        <ul>
+          <li>栈顶(#15,00002)对应步骤No4</li>
+          <li>函数ChessboardTiling(0,0,0,0,2)的返回点，是父函数ChessboardTiling的#15代码行(递归)；</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="code参数">Code参数</h4>
+<ul>
+  <li>n - 棋盘规模输入；</li>
+  <li>p0,q0 - 残缺方格的坐标输入；</li>
+  <li>m - 棋盘的行列数，值为2<sup>n</sup>；</li>
+  <li>TileNO - L型骨牌的全局计数；</li>
+  <li>r,c - 子棋盘的左上角坐标（起点）；</li>
+  <li>p,q - 子棋盘的残缺方格坐标；</li>
+  <li>s - 子棋盘的行列数；</li>
+  <li>no - 子棋盘的L型骨牌号（用于赋值）；</li>
+  <li>chessboard - 棋盘矩阵；</li>
+</ul>
+

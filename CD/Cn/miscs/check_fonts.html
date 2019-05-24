@@ -1,0 +1,101 @@
+---
+layout: default
+tags:
+  - miscs
+categories:
+  - miscs
+permalink: CD/Cn/miscs/check_fonts
+---
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Check Fonts</title>
+    <!--<link rel="stylesheet" type="text/css" href="/CD/assets/css/Basic.css">-->
+</head>
+<body>
+<div style="overflow: auto">
+    <h2 align="center">检测本机的字体安装情况</h2>
+    <hr>
+    <h3>目录</h3>
+    <ul class="no_bullets">
+        <li><a href="#检测本机是否安装了Font-Awesome字体">检测本机是否安装了Font Awesome字体</a> </li>
+        <li><a href="#为本机安装Font-AweSome字体">为本机安装Font AweSome字体</a> </li>
+        <li><a href="#检测本机是否安装了Iosevka字体">检测本机是否安装了Iosevka字体</a> </li>
+        <li><a href="#为本机安装Iosevka字体">为本机安装Iosevka字体</a> </li>
+        <li><a href="#检测本机安装的全部字体">检测本机安装的全部字体</a> </li>
+    </ul>
+    <hr>
+
+    <h3 id="#检测本机是否安装了Font-Awesome字体">检测本机是否安装了Font Awesome字体</h3>
+    <p style="font-weight: bold">注: 网站及网络信息系统为降低网络访问流量、提高访问速度，应该尽量使用字符化的图标。
+        <a href="https://fontawesome.com/">Font Awesome字体</a>就提供了很多有用的图标符号。
+        当要访问的网站及网络信息系统使用了Font Awesome字体中的符号时，就需要在本机安装Font Awesome字体。
+    </p>
+    <p>这里<span class="Font_Awesome" style="color: blue;">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        如果显示的不是<img src="{{'/CD/imgCn/miscs/images/FontAweSomeTest.png' | relative_url }}" style="border-style: none"/> ，则说明本机没有安装Font AweSome字体。</p>
+		
+    <h3 id="#为本机安装Font-AweSome字体">为本机安装Font AweSome字体</h3>
+    <ol>
+        <li>打开<a href="https://fontawesome.com/v4.7.0/" target="_blank">Font Awesome 4.7.0</a>网页</li>
+        <li>点击网页上的“Download”按钮，打开下载提示窗口
+            <ul>
+                <li>注：Font Awesome站引用了Google服务器上的js文件，需要技术措施才能打开下载提示窗口</li>
+                <li>解：可以直接从<a href="https://pan.baidu.com/s/1lQz1syzu3R5dTdQBtWvbxA" target="_blank">
+                    百度网盘下载fontawesome-webfont.ttf字体文件</a></li>
+            </ul>
+        </li>
+        <li>在下载提示窗口中点击底部的“No thanks, just download Font Awesome 4”
+            <ul>
+                <li>注：若下载提示窗口底部未出现“No thanks, just download Font Awesome 4”</li>
+                <li>解：可关闭下载提示窗口，再点击“Download”按钮打开一次</li>
+            </ul>
+        </li>
+        <li>将font-awesome-4.7.0.zip下载到本机文件夹。</li>
+        <li>将font-awesome-4.7.0.zip文件解压。</li>
+        <li>打开解压后的fonts子文件夹。</li>
+        <li>右击其中的fontawesome-webfont.ttf字体文件。</li>
+        <li>点击快捷菜单中的“安装”菜单项，则fontawesome-webfont.ttf字体将被安装到系统中。</li>
+        <li>刷新本网页，确保上述符号显示正常
+            <ul>
+                <li><b>注1：</b>Google Chrome需要关闭再重新打开才能显示新安装字体中的符号</li>
+                <li><b>注2：</b>Microsoft Edge需要重启系统才能显示新安装字体中的符号</li>
+            </ul>
+        </li>
+    </ol>
+
+    <h3 id="#检测本机是否安装了Iosevka字体">检测本机是否安装了Iosevka字体</h3>
+    <p>如果下面的第1行显示与第2行不同，则说明本机未安装Iosevka字体。</p>
+    <p class="Font_Iosevka">abcdefghijkABCDEFGHIJK0123456789</p>
+    <p class="Font_Iosevka_Web">abcdefghijkABCDEFGHIJK0123456789</p>
+    <p>Iosevka字体是一款很好的等宽字体，可用于对齐显示字符串的场合。</p>
+    <p>尽管可以通过网络访问Iosevka字体库，但会降低访问效率，因此最好在本机安装Iosevka字体。安装方法参照下节描述。</p>
+
+    <h3 id="#为本机安装Iosevka字体">为本机安装Iosevka字体</h3>
+    <ol>
+        <li>打开<a href="https://be5invis.github.io/Iosevka/" target="_blank">Iosevka网站。</a></li>
+        <li>点击网页上的“Download Iosevka”按钮，进入下载页。</li>
+        <li>下载其中的第1个压缩包01-iosevka-2.0.0.zip到本机文件夹。</li>
+        <li>将01-iosevka-2.0.0.zip文件解压。</li>
+        <li>打开解压后的ttf子文件夹。</li>
+        <li>右击其中的iosevka-regular.ttf字体文件。</li>
+        <li>点击快捷菜单中的“安装”菜单项，则iosevka-regular.ttf字体将被安装到系统中。</li>
+        <li>刷新本网页，确保上述符号显示正常
+            <ul>
+                <li><b>注1：</b>Google Chrome需要关闭再重新打开才能显示新安装字体中的符号</li>
+                <li><b>注2：</b>Microsoft Edge需要重启系统才能显示新安装字体中的符号</li>
+            </ul>
+        </li>
+    </ol>
+
+    <h3 id="#检测本机安装的全部字体">检测本机安装的全部字体</h3>
+    <p><a href="http://www.fileformat.info/index.htm">FileFormat.info</a>网站提供了一个检测本机安装的全部字体的功能，
+        即：<a href="http://www.fileformat.info/info/unicode/font/fontlist.htm">Local Font List</a>。
+        打开该网页将给出本机安装的全部字体列表。在顶部的“Sample text”中输入一个字符，则下面每种字体后面都将显示该字体中该字符的形状，
+        并且可由此看出那种字体中没有该字符。
+    </p>
+    <p>注：Local Font List需要浏览器启动Flash。</p>
+</div>
+</body>
+</html>

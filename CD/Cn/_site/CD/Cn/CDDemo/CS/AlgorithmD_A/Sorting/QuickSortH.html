@@ -1,0 +1,32 @@
+<h3 id="快速排序算法-demo-操作要领"><center>快速排序算法 Demo 操作要领</center></h3>
+<div align="right">
+	<a href="/CD/Cn/CDDemo/CS/QandA.html" target="_blank">Q&amp;A</a>
+    &nbsp;&nbsp;
+	<a href="/CD/Cn/" target="_blank">Home</a>	
+</div>
+<hr />
+
+<h4 id="演示设置">演示设置</h4>
+<ol>
+  <li>使用不同颜色的嵌套的矩形框标识递归的分区；</li>
+  <li>取分区最右侧的 high 元素作为枢纽元素 (Lomuto分区法)，标识为红色
+    <ul>
+      <li>pvtp - pivot position，即枢纽位置，对应pivot_p；</li>
+    </ul>
+  </li>
+  <li>使用 下标 标识元素的初始位置；</li>
+</ol>
+
+<h4 id="code参数">Code参数</h4>
+<ul>
+  <li>a[ ] - 输入数组；</li>
+  <li>n - 排序数组长度；</li>
+  <li>low - 排序递归调用的数组低端索引；</li>
+  <li>high - 排序递归调用的数组高端索引；</li>
+  <li>p - 分区函数 (partition) 返回的枢纽元素的排序位置 (即分区点) 的索引；</li>
+  <li>pivot_p - 枢纽位置，初始值为 high；</li>
+  <li>pivot - 枢纽位置元素，初始值为 a[high];</li>
+  <li>i - 索引从左至右，第1个比 pivot 大的元素位置；</li>
+  <li>j - 标识i索引后，第1个比 pivot 小的元素位置；</li>
+</ul>
+

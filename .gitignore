@@ -1,0 +1,17 @@
+.sass-cache
+Gemfile.lock
+*.gem
+
+/_includes
+/_sass/jekyll-theme-leap-day-备份.scss
+/_sass/jekyll-theme-leap-day - 副本.scss
+/_layouts/default--.html
+/_layouts/defaultold.html
+/_layouts/post.html
+/_posts/Classical/images
+/_posts/Classical/image-example.md
+/_site
+
+/_sass/fonts.scss
+/CD/assets/fonts
+/CD/assets/css/Basic.css

@@ -1,0 +1,29 @@
+/*table, th, td {
+    border: 1px solid black;
+	border: 1px;
+    border-collapse: collapse;
+}*/
+th, td {
+    padding: 5px;
+}
+th {
+  text-align:center;
+}
+
+.text_framed {
+    border: solid lightcoral 1px;
+    padding: 1px 4px;
+    /*
+    box-shadow: 0 0 0 5px BurlyWood inset;
+    */
+}
+.text_center {
+    text-align: center;
+}
+* {
+    font-family: 'Times New Roman', Times, SimSun, serif;
+}
+h2 {
+    text-align: center;
+    color: navy;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Clone repository on GitHub to local</title>
+    <!--<link rel="stylesheet" type="text/css" href="../../../css/Basic.css">-->
+</head>
+<body>
+<div style="overflow: auto">
+    <h2 align="center">将GitHub上的存储库克隆到本地</h2>
+    <hr>
+    <h3>目录</h3>
+    <ul class="no_bullets">
+        <li><a href="#基本克隆操作">基本克隆操作</a> </li>
+        <li><a href="#打开克隆的存储库">打开克隆的存储库</a> </li>
+    </ul>
+    <hr>
+    <p><b>说明：</b>本教程讨论的是将公开的(Public)GitHub库克隆到本地的操作，
+        后面还将讲述更高级的“以合作人身份克隆GitHub库到本地”的操作。</p>
+		
+    <h3 id='#基本克隆操作'>基本克隆操作</h3>
+    <p>将他人在GitHub上创建的库克隆到本地进行学习甚至实践应用性的开发是一个很经常的操作，
+        VS的GitHub扩展为此提供了简洁快速的操作。<br>
+        假设有某个用户想将此前教程中在GitHub上创建的Algorithms存储库克隆下来，
+        则他可以先打开VS，再转到团队资源管理器面板的“管理连接”页。
+        点击该页最下面“本地GIT存储库”子面板下面的“克隆”： </p>
+    <img src="/CD/imgCn/IDE/VSCCPP/UsingGitHub/images/CloneBasic01.png" style="width: calc(405px / 1.2)"/>
+    <p>需要在下面的两个框内分别输入GitHub上存储库的URL和克隆到本地的文件夹：</p>
+    <img src="/CD/imgCn/IDE/VSCCPP/UsingGitHub/images/CloneBasic02.png" style="width: calc(405px / 1.2)"/>
+    <p><b>注：</b>第2个框中路径最后的库名会自动取为第1个框中的存储库名，但可以修改，
+        这个特点允许将GitHub上的同一个存储库在本地克隆多份，这对于跟踪GitHub上存储库的更新很有用。
+        点击下面的克隆按钮将进行实际的克隆操作，成功后面板如下所示： </p>
+    <img src="/CD/imgCn/IDE/VSCCPP/UsingGitHub/images/CloneBasic03.png" style="width: calc(406px / 1.2)"/>
+    <p>可以看到在“本地GIT存储库”子面板下的列表中新增了克隆的存储库。</p>
+	
+    <h3 id='#打开克隆的存储库'>打开克隆的存储库</h3>
+    <p>右击克隆的存储库： </p>
+    <img src="/CD/imgCn/IDE/VSCCPP/UsingGitHub/images/CloneReposOpen01.png" style="width: calc(407px / 1.2)"/>
+    <p>再点击“打开”菜单项，可以看到面板切换到了主页，并下面的“解决方案”子面板中显示存储库中的解决方案：</p>
+    <img src="/CD/imgCn/IDE/VSCCPP/UsingGitHub/images/CloneReposOpen02.png" style="width: calc(407px / 1.2)" />
+    <p>双击Algorithms.sln解决方案可以在VS中打开该解决方案： </p>
+    <img src="/CD/imgCn/IDE/VSCCPP/UsingGitHub/images/CloneReposOpen03.png" style="width: calc(936px / 1.2)" />
+</div>
+</body>
+</html>

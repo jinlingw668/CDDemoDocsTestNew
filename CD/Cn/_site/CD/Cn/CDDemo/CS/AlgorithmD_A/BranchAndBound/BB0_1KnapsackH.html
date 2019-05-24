@@ -1,0 +1,99 @@
+<h3 id="0-1背包问题的分支限界算法-demo-操作要领"><center>0-1背包问题的分支限界算法 Demo 操作要领</center></h3>
+<div align="right">
+	<a href="/CD/Cn/CDDemo/CS/QandA.html" target="_blank">Q&amp;A</a>
+    &nbsp;&nbsp;
+	<a href="/CD/Cn/" target="_blank">Home</a>		
+</div>
+<hr />
+
+<h4 id="演示设置">演示设置</h4>
+
+<ol>
+  <li>使用 id: v,w,boundV 标识分支节点的限界情况，其中
+    <ul>
+      <li>id - 节点的字母编号，依次为A,B,C,…；</li>
+      <li>X - 节点的物品组合，1标识装入，0标识未装入；鼠标悬停可见；</li>
+      <li>v - 节点的物品价值；</li>
+      <li>w - 节点的物品重量；</li>
+      <li>boundV - 节点的价值上限；
+        <ul>
+          <li>上限值是计算所得，可能有小数，节点处取整显示，鼠标悬停可见实际值；</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>分支树的上(左)子节点标识装入物品，下(右)子节点标识不装入物品。</li>
+  <li>使用 Priority Queue 标识候选优先队列，并用二叉树标识其堆结构。</li>
+  <li>使用 OptN,OptV,OptItems 记录当前的最优节点
+    <ul>
+      <li>OptN - Current optimal node 当前的最优节点编号，A,B,C,…</li>
+      <li>OptV - Current optimal value 当前的最优值</li>
+      <li>OptItems - Current optimal items 当前的最优组合</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="code参数">Code参数</h4>
+<ul>
+  <li>N - 物品数量；</li>
+  <li>W - 背包的最大承重量；</li>
+  <li>v - 物品价值输入；</li>
+  <li>w - 物品重量输入；</li>
+  <li>OptV - 当前最优解(最大价值)；</li>
+  <li>OptItems - 当前最优解的物品组合；
+    <ul>
+      <li>当前的最优解组合可能有多个，此代码仅记录第一个；也因此，对应节点可能是内部节点，方案输出时需要补充必要的0，详见[I/O]；</li>
+    </ul>
+  </li>
+  <li>stItem - 物品(结构体类型)
+    <ul>
+      <li>v - 物品价值；</li>
+      <li>w - 物品重量；</li>
+    </ul>
+  </li>
+  <li>Items - 物品集合
+    <ul>
+      <li>stItem - 单个物品；</li>
+    </ul>
+  </li>
+  <li>stNode - 分支树的节点(结构体类型)
+    <ul>
+      <li>d - 节点在树中的级别，根节点对应0级；也对应物品编号，如第1级对应物品1；</li>
+      <li>v - 节点的物品价值；</li>
+      <li>w - 节点的物品重量；</li>
+      <li>items - 节点的物品组合，1标识装入，0标识未装入；
+        <ul>
+          <li>演示中示为X，节点鼠标悬停可见；</li>
+        </ul>
+      </li>
+      <li>boundV - 节点的价值上限；</li>
+    </ul>
+  </li>
+  <li>Q - 候选活节点集合(优先队列)，初始值V0
+    <ul>
+      <li>stNode - 单个节点；</li>
+      <li>以boundV为键值维护为优先堆，对应演示区的堆结构；</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="io">I/O</h4>
+<ul>
+  <li>Items - 输入的物品价值和重量；</li>
+  <li>Sorted items - 按单位价值排序后的物品价值和重量；</li>
+  <li>Output - 输出算法的最优解
+    <ul>
+      <li>Optimal value - 装入物品的最优解(最大价值)；</li>
+      <li>Optimal solution - 装入物品的最优方案(对应于Sorted items)；
+        <ul>
+          <li>最优解节点是内部的非叶子节点时，最优方案需添加必要的0
+            <ul>
+              <li>比如，4个物品的最优方案101，需补足0为1010</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+

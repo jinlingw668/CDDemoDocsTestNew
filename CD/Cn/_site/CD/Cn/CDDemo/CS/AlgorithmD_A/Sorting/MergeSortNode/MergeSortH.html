@@ -1,0 +1,57 @@
+<h3 id="归并排序算法-demo-操作要领"><center>归并排序算法 Demo 操作要领</center></h3>
+<div align="right">
+	<a href="/CD/Cn/CDDemo/CS/QandA.html" target="_blank">Q&amp;A</a>
+    &nbsp;&nbsp;
+	<a href="/CD/Cn/" target="_blank">Home</a>			
+</div>
+<hr />
+
+<h4 id="演示设置">演示设置</h4>
+<ol>
+  <li>使用 不同颜色的嵌套的矩形框 标识递归的分区；</li>
+  <li>使用 Op列 标识演示状态：
+    <ul>
+      <li>B - Begin，开始；</li>
+      <li>D - Divide，划分；</li>
+      <li>M - Merge，归并；</li>
+      <li>F - Final step in dividing，划分至最后一步，即单个元素时；</li>
+    </ul>
+  </li>
+  <li>Op 标识为 B, D, F 时
+    <ul>
+      <li>其后的三列标识为 low, mid, high，对应 MergeSort 的函数参数；</li>
+    </ul>
+  </li>
+  <li>Op 标识为 M 时
+    <ul>
+      <li>其后的三列标识为 p/i , q/j , r/k ，对应 TwoWayMerge 的函数参数；</li>
+      <li>且使用两行演示数据
+        <ul>
+          <li>第1行，对应参数 p, q, r；</li>
+          <li>第2行，对应参数 i, j, k；</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>使用 下标 标识元素的初始位置；</li>
+  <li>交互时，注意临时数组赋值后的 i, j, k 索引需自增，相关 code 如下
+    <ul>
+      <li>b[k++] = a[i++];</li>
+      <li>b[k++] = a[j++];</li>
+      <li>b[k++] = a[j]; j++</li>
+      <li>b[k++] = a[i]; i++</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="code参数">Code参数</h4>
+<ul>
+  <li>a[ ] - 输入数组；</li>
+  <li>n - 排序数组长度；</li>
+  <li>low, mid, high - 排序递归调用的数组低端、中间、高端索引；</li>
+  <li>p, q, r - 二路归并函数调用的数组低端、中间、高端索引；</li>
+  <li>i - 二路归并中，第1路的数组索引，初始为 p；</li>
+  <li>j - 二路归并中，第2路的数组索引，初始为 q+1；</li>
+  <li>k - 二路归并中，归并目标数组索引，初始为 p；</li>
+  <li>b[ ] - 二路归并中使用的临时数组；</li>
+</ul>

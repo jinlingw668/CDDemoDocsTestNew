@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Upload local code to GitHub</title>
+    <!--<link rel="stylesheet" type="text/css" href="../../../css/Basic.css">-->
+</head>
+<body>
+<div style="overflow: auto">
+    <h2 align="center">将本地的代码修改上传GitHub</h2>
+    <hr>
+    <h3>目录</h3>
+    <ul class="no_bullets">
+        <li><a href="#修改代码">修改代码</a> </li>
+        <li><a href="#提交代码并同步">提交代码并同步</a> </li>
+        <li><a href="#在GitHub网站上查看同步的结果">在GitHub网站上查看同步的结果</a> </li>
+    </ul>
+    <hr>
+    <p>将本地修改的文件上传GitHub需要执行两个步骤，即：(1)提交；(2)同步。</p>
+    
+	<h3 id='#修改代码'>修改代码</h3>
+    <p>以前述的Algorithms解决方案为例，将“printf("Hello world!\n");”行前的注释去掉，并保存：</p>
+    <img src="/CD/imgCn/IDE/VSCCPP/UsingGitHub/images/EditCode.png" height="217" width="446"/>
+    
+	<h3 id='#提交代码并同步'>提交代码并同步</h3>
+    <p>转到解决方案资源管理器模板，右击解决方案： </p>
+    <img src="/CD/imgCn/IDE/VSCCPP/UsingGitHub/images/CommitCode01.png" style="width: calc(844px / 1.1)"/>
+    <p>点击“提交”菜单项，如果此前没有进行过全局账户设置，则给出提示： </p>
+    <img src="/CD/imgCn/IDE/VSCCPP/UsingGitHub/images/CommitCode02.png" height="218" width="486"/>
+    <p>可在此对话框中输入GitHub账户中注册的账户名和电子邮件地址。
+        输入后可以在全局设置中看到所做的设置(参考“为VS Community 2017增加GitHub扩展”)。
+    设定了全局账户后，点击“提交”菜单项，将转到“团队资源管理器”面板，如下所示：</p>
+    <img src="/CD/imgCn/IDE/VSCCPP/UsingGitHub/images/CommitCode03.png" height="329" width="356"/>
+    <p>Git系统提交代码必须填入提交信息，填入提交信息后，可以点击输入框下面的下拉按钮：</p>
+    <img src="/CD/imgCn/IDE/VSCCPP/UsingGitHub/images/CommitCode04.png" height="329" width="357"/>
+    <p>点击最后一个菜单项，即“全部提交并同步”，团队资源管理将显示同步的进度：</p>
+    <img src="/CD/imgCn/IDE/VSCCPP/UsingGitHub/images/CommitCode05.png" height="407" width="354"/>
+    <p>成功后将显示：</p>
+    <img src="/CD/imgCn/IDE/VSCCPP/UsingGitHub/images/CommitCode06.png" height="404" width="354"/>
+    
+	<h3 id='#在GitHub网站上查看同步的结果'>在GitHub网站上查看同步的结果</h3>
+    <p>在浏览器中打开GitHub上的存储库，打开其中的main.cpp文件，可以看到“printf("Hello world!\n");”行前的注释同步地去掉了：</p>
+    <img src="/CD/imgCn/IDE/VSCCPP/UsingGitHub/images/ViewSynResults.png" height="659" width="730"/></div>
+</body>
+</html>

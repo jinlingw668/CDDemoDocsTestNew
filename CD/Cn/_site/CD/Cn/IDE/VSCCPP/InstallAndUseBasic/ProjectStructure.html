@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title> Directory structure of VC project</title>
+    <!--<link rel="stylesheet" type="text/css" href="../../../css/Basic.css">-->
+</head>
+<body>
+<div style="overflow: auto">
+    <h2 align="center"> VC项目的目录结构</h2>
+    <p> 掌握项目都由什么样的文件组成，它们分布在什么样的目录结构中是专业程序员必须掌握的。</p>
+    <hr>
+    <h3>目录</h3>
+    <ul class="no_bullets">
+        <li><a href="#EmptySoluDirectory">空的VC项目解决方案主目录</a>
+            <ul type="none"><li><a href="#ShowHiddenFiles">显示隐藏的文件/文件夹及文件扩展名</a></li></ul>
+        </li>
+        <li><a href="#EmptyVCDirectory">空的VC项目目录</a> </li>
+        <li><a href="#ShowAllFiles">最佳实践：显示所有文件</a> </li>
+        <li><a href="#CPPDirectory">最佳实践：公认的C/C++程序文件的目录组织</a>
+            <ul type="none"><li><a href="#ExampleGCD">运用示例</a></li></ul>
+        </li>
+    </ul>
+    <hr>
+    <h3 id='EmptySoluDirectory'>空的VC项目解决方案主目录</h3>
+    <p> 用Windows资源管理器打开新建的空VC项目所在的文件夹，可以看到其中包括如下内容：</p>
+    <img src="/CD/imgCn/IDE/VSCCPP/InstallAndUseBasic/images/OpenProjectFolder.png" height="228" width="554"/><br>
+    <p> 目录中包括VS解决方案文件Algorihtms.sln及项目文件夹Algorithms和Debug文件夹，另外还有一个隐藏的.vs文件夹。</p>
+    <p><b> 注：</b>VS以解决方案为单位管理和组织软件开发，解决方案由项目构成。</p>
+
+    <h4 id='ShowHiddenFiles'>显示隐藏的文件/文件夹及文件扩展名</h4>
+    <p> 上面Algorihtms解决方案文件夹中的“.vs”文件夹是一个隐藏的文件夹，专业的计算机人员应该配置Windows资源管理器显示隐藏的
+        文件及文件夹、显示文件的扩展名(即类型名)以便更好地了解和操作计算机中的资源。</p>
+    <p>要显示隐藏的文件/文件夹，需要点击Windows资源管理器“查看”面板中的“选项”图标按钮：</p>
+    <img src="/CD/imgCn/IDE/VSCCPP/InstallAndUseBasic/images/ViewOptions.png" style="width: calc(834px / 1.2)"/><br>
+    <p> 打开选项对话框，选中其中的“显示隐藏的文件、文件夹和驱动器”单选项，可以显示当前文件夹中隐藏的文件和文件夹；
+        清除“隐藏已知文件类型的扩展名”复选框，可以显示当前文件夹中所有文件的扩展名。</p>
+    <p> 点击对话框中上部的“应用到文件夹”按钮可以使上述选项对电脑中所有的文件夹有效。</p>
+    <img src="/CD/imgCn/IDE/VSCCPP/InstallAndUseBasic/images/ShowAllFiles.png" style="width: calc(444px / 1.2)"/>
+
+    <h3 id='EmptyVCDirectory'>空的VC项目目录</h3>
+    <p> 打开Algorithms解决方案下的Algorithm文件夹，可以看到其中包括如下内容：</p>
+    <img src="/CD/imgCn/IDE/VSCCPP/InstallAndUseBasic/images/AlgorithmFolder.png" height="229" width="553"/><br>
+    <p> 目录中包含VC项目文件Algorihtms.vcxproj及附属文件Algorihtms.vcxproj.filters，
+        此前创建的main.cpp原程序文件以及一个Debug文件夹。</p>
+    <h3 id='ShowAllFiles'>最佳实践：显示所有文件</h3>
+    <p> VC的解决方案资源管理器默认以逻辑分类视图显示项目中的文件：</p>
+    <img src="/CD/imgCn/IDE/VSCCPP/InstallAndUseBasic/images/SoluLogicalView.png" height="425" width="254"/><br>
+    <p> 上图中的“头文件”、“源文件”均是逻辑虚拟的分类或目录。但这种视图并不是专业程序员的最好选择，
+        专业程序员应该还是以看到真实的项目文件和文件夹结构的“物理文件视图”为好。</p>
+    <p>VC提供了在这两种视图间切换的功能，在解决方案资源管理器顶部有一个“显示所有文件”的工具栏按钮：</p>
+
+    <img src="/CD/imgCn/IDE/VSCCPP/InstallAndUseBasic/images/SoluLogicalView01.png" height="426" width="312"/><br>
+    <p> 点击该按钮可以切换到物理文件视图：</p>
+    <img src="/CD/imgCn/IDE/VSCCPP/InstallAndUseBasic/images/SoluPhysicalView.png" height="425" width="313"/><br>
+    <p> <b>注：</b>该按钮是一个开关按钮，再次点击可回到逻辑视图。</p>
+
+    <h3 id='CPPDirectory'>最佳实践：公认的C/C++程序文件的目录组织</h3>
+    <p> C/C++编程领域对于项目程序文件的目录组织已经形成了一些公认的结构规范，
+        即源程序文件（即.c、.cpp文件等）放在项目的src文件夹或其下面的子文件夹中，
+        头文件（即.h、.hpp文件等）放在项目的include文件夹或其下面的子文件夹中。</p>
+    <h4 id='ExampleGCD'>运用示例</h4>
+    <p> 我们以欧几里得最大公约数(GCD)算法为例，说明上述最佳实践的运用。</p>
+    <p><b>注：</b>如无特别说明，操作都是在物理文件视图中进行的。</p>
+    <ol>
+        <li>右击Algorithms项目、添加、新建文件夹：<br>
+            <img src="/CD/imgCn/IDE/VSCCPP/InstallAndUseBasic/images/Project_AddDir.png" style="width: calc(872px / 1.2)"/></li>
+        <li>
+            分别添加src和include文件夹，在src文件夹下添加classical文件夹，
+            再将main.cpp拖入到src文件夹中，使项目的结构如下所示：<br>
+            <img src="/CD/imgCn/IDE/VSCCPP/InstallAndUseBasic/images/Project_AddMain.png" height="324" width="312"/><br>
+            <b>注意：</b>移动main.cpp的位置不会影响程序的运行，可以点击运行按钮证实。<br>
+        </li>
+        <li>
+            在classical文件夹下添加一个源程序文件，取名为EuclidGCD.cpp，在其中输入欧几里得最大公约数算法，如下所示：<br>
+            <img src="/CD/imgCn/IDE/VSCCPP/InstallAndUseBasic/images/Project_AddGCD.png" style="width: calc(941px / 1.2)"/></li>
+        <li>在include文件夹下添加一个头文件，取名为headers.h，内容如下：<br>
+            <img src="/CD/imgCn/IDE/VSCCPP/InstallAndUseBasic/images/Project_AddHeader.png" style="width: calc(941px / 1.2)"/><br>
+            <b>注意：</b>其中的#pragma once是添加头文件时自动生成的，需要保留，它的作用是避免头文件的重复引用。<br>
+        </li>
+        <li>
+            在src文件夹下添加名为test的文件夹，在其中添加一个名为EuclidGCDTest.cpp的测试EuclidGCD的源程序文件，内容如下：<br>
+            <img src="/CD/imgCn/IDE/VSCCPP/InstallAndUseBasic/images/Project_Addtest.png" style="width: calc(971px / 1.2)"/><br>
+            <b>注意：</b>#include后用双引号引用当前项目中的头文件，用尖括号引用系统头文件，头文件的路径要用正向的斜杠分割目录。<br>
+        </li>
+        <li>修改main.cpp函数如下所示：<br>
+            <img src="/CD/imgCn/IDE/VSCCPP/InstallAndUseBasic/images/Project_EditMain.png" style="width: calc(971px / 1.2)"/></li>
+        <li>运行项目，应该出现如下的运行结果窗口：<br>
+            <img src="/CD/imgCn/IDE/VSCCPP/InstallAndUseBasic/images/Project_RunWin.png" height="124" width="451"/></li>
+    </ol>
+</div>
+</body>
+</html>

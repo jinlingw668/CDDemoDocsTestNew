@@ -1,0 +1,75 @@
+---
+layout: default
+tags:
+  - VS2017
+categories:
+  - VS2017
+permalink: CD/Cn/IDE/VSCCPP/UsingGitHub/GitHubExtendAddedForVS
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Add GitHub extention for VS Community 2017</title>
+    <!--<link rel="stylesheet" type="text/css" href="../../../css/Basic.css">-->
+</head>
+<body>
+<div style="overflow: auto">
+    <h2 align="center">为VS Community 2017增加GitHub扩展</h2>
+    <hr>
+    <h3>目录</h3>
+    <ul class="no_bullets">
+        <li><a href="#说明">说明</a> </li>
+        <li><a href="#安装">安装</a> </li>
+        <li><a href="#连接">连接</a> </li>
+        <li><a href="#查看连接">查看连接</a> </li>
+    </ul>
+    <hr>
+    <h3 id='#说明'>说明</h3>
+    <p>为了方便在Visual Studio中使用GitHub进行云上的源代码版本控制(VS称为源代码管理)，
+        GitHub开发了Visual Studio GitHub扩展（GitHub Extension for Visual Studio），其官网为：
+        <a href="https://visualstudio.github.com/">GitHub Extension for Visual Studio官网</a><br>
+        GitHub Extension for Visual Studio存储库：
+        <a href="https://github.com/github/VisualStudio">GitHub Extension for Visual Studio Repository</a></p>
+     <p>VS Community 2017中源代码管理操作是在团队资源管理器中进行的。
+        默认情况下团队资源管理器以选项卡的形式与解决方案资源管理器显示在左侧的面板中。
+        如果没有显示，可以点击“视图”主菜单上的“团队资源管理器”将其打开。
+        VS默认的源代码管理系统是Visual Studio Team Services，如下图所示：</p>
+    <img src="{{'/CD/imgCn/IDE/VSCCPP/UsingGitHub/images/VS_TeamServices.png' | relative_url }}" style="width: calc(698px / 2)"/>
+    
+	<h3 id='#安装'>安装</h3>
+    <p>为VS Community 2017安装GitHub扩展很简单。</p>
+    <p>先在开始菜单中找到“Visual Studio Installer”并启动： </p>
+    <img src="{{'/CD/imgCn/IDE/VSCCPP/UsingGitHub/images/VSInstaller.png' | relative_url }}" style="width: calc(960px / 1.3)"/>
+    <p>点击窗口中的“修改”按钮：</p>
+    <p>在打开的窗口中转到“单个组件”页：</p>
+    <img src="{{'/CD/imgCn/IDE/VSCCPP/UsingGitHub/images/GitHubExtendSelected.png' | relative_url }}" style="width: calc(960px / 1.3)"/>
+    <p>从列表中找到“代码工具”组，勾选其中的“适用于Visual Studio的GitHub扩展”，再点击右下角的“修改”按钮，
+        则Visual Studio Installer即可完成为VS Community 2017增加GitHub扩展的操作。</p>
+    <p><b>注意：</b>专业版的Visual Studio的安装程序中包括GitHub扩展选项，安装时选中即可，
+        如果安装时没有选中，则可以在安装完成后使用工具菜单中的”更新和扩展“安装。</p>
+    <p>安装成功后，在VS的团队资源管理器中可以看到增加了GitHub项，如下所示：</p>
+    <img src="{{'/CD/imgCn/IDE/VSCCPP/UsingGitHub/images/InstallSucceed.png' | relative_url }}" style="width: calc(703px / 2)"/>
+    
+	<h3 id='#连接'>连接</h3>
+    <p>点击上图中GitHub项下的Connect（连接），可以打开如下所示的连接到GitHub的窗口，
+        在其中输入此前注册的GitHub账户和口令，即可完成VS到GitHub的连接。</p>
+    <img src="{{'/CD/imgCn/IDE/VSCCPP/UsingGitHub/images/ConnectToGitHub.png' | relative_url }}" style="width: calc(806px / 2.5)"/>
+    <p>连接成功后，团队资源管理器显示如下。可以看到GitHub下显示Clone（克隆）、Create（创建）等功能项。
+        稍后将对此进行简要介绍。</p>
+    <img src="{{'/CD/imgCn/IDE/VSCCPP/UsingGitHub/images/ConnectSucceed.png' | relative_url }}" style="width: calc(704px / 2)"/>
+    <p>连接成功后，VS会记住连接设置，此后就可以在VS中以集成化的方式使用GitHub了。</p>
+    
+	<h3 id='#查看连接'>查看连接</h3>
+    <p>在团队资源管理器模板上点击“连接”或其右侧的下拉箭头，可以打开如下所示的菜单：</p>
+    <img src="{{'/CD/imgCn/IDE/VSCCPP/UsingGitHub/images/ConnectionView01.png' | relative_url }}" style="width: calc(735px / 1.2)"/>
+    <p>点击“设置”， 模板显示如下： </p>
+    <img src="{{'/CD/imgCn/IDE/VSCCPP/UsingGitHub/images/ConnectionView02.png' | relative_url }}" style="width: calc(735px / 1.2)"/>
+    <p>点击“全局设置”，面板显示如下：</p>
+    <img src="{{'/CD/imgCn/IDE/VSCCPP/UsingGitHub/images/ConnectionView03.png' | relative_url }}" style="width: calc(735px / 1.2)"/>
+    <p>其中显示了此前登录的用户名及电子邮件地址。“默认存储库位置”可以根据需要修改。</p>
+    <p>勾选“支持从第三方源下载作者图像”可以下载团队成员的头像，这可增强团队协作的感觉。</p>
+</div>
+</body>
+</html>

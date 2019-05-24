@@ -1,0 +1,61 @@
+<h3 id="全排列遍历算法-demo-操作要领"><center>全排列遍历算法 Demo 操作要领</center></h3>
+<div align="right">
+	<a href="/CD/Cn/CDDemo/CS/QandA.html" target="_blank">Q&amp;A</a>
+    &nbsp;&nbsp;
+	<a href="/CD/Cn/" target="_blank">Home</a>			
+</div>
+<hr />
+
+<h4 id="演示设置">演示设置</h4>
+
+<ol>
+  <li>使用Call Stack记录算法子函数调用的栈信息，以“No: (i,j)”或者“No: (i)”的形式
+    <ul>
+      <li>No: (i,j) - 子函数Permuting(i)内(s[i],s[j]) 相交换 或 交换回来；</li>
+      <li>No: (i) - 子函数Permuting(i)输出排列；</li>
+    </ul>
+  </li>
+  <li>使用 Output 标识算法的排列输出，以” cnt：Perm “的形式
+    <ul>
+      <li>cnt - 排列计数；</li>
+      <li>Perm - 排列序列，对应s；</li>
+    </ul>
+  </li>
+  <li>例如 n=4时
+    <ul>
+      <li>002：(0,0)
+        <ul>
+          <li>栈顶(0,0)对应步骤No2，子函数Permuting(0)的(s[0],s[0]) 相交换；</li>
+        </ul>
+      </li>
+      <li>008：(0,0);(1,1);(2,3);(3)
+        <ul>
+          <li>栈顶(3)对应步骤No8，子函数Permuting(3)输出第1个“001: 1234”；</li>
+        </ul>
+      </li>
+      <li>010: (0,0);(1,1);(2,3);
+        <ul>
+          <li>栈顶(2,3)对应步骤No10，子函数Permuting(2)的(s[2],s[3]) 相交换；</li>
+        </ul>
+      </li>
+      <li>012: (0,0);(1,1);(2,3);(3)
+        <ul>
+          <li>栈顶(3)对应步骤No12，子函数Permuting(3)输出第2个排列“002: 1243”；</li>
+        </ul>
+      </li>
+      <li>012: (0,0);(1,1);(2,3);
+        <ul>
+          <li>栈顶(2,3)对应步骤No12，子函数Permuting(2)的(s[2],s[3]) 交换回来；</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="code参数">Code参数</h4>
+<ul>
+  <li>n - 排列规模，取值 3 ~ 4 ；</li>
+  <li>s - 排列序列数组；</li>
+  <li>cnt - 排列计数；OutputOnePermutation()内定义；</li>
+</ul>
+

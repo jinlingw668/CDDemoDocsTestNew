@@ -1,0 +1,41 @@
+<h3 id="0-1-背包问题算法-demo-操作要领"><center>0-1 背包问题算法 Demo 操作要领</center></h3>
+<div align="right">
+	<a href="/CD/Cn/CDDemo/CS/QandA.html" target="_blank">Q&amp;A</a>
+    &nbsp;&nbsp;
+	<a href="/CD/Cn/" target="_blank">Home</a>		
+</div>
+<hr />
+
+<h4 id="演示设置">演示设置</h4>
+
+<ol>
+  <li>使用v<sup>e</sup>标识价值和方向，其中e的值说明如下：
+    <ul>
+      <li>U - 从上方计算来的v；// 物品 i 不放入背包的情况；</li>
+      <li>0/1/…/j-1 - 从左上计算来的v，对应 j 减去物品i的重量w[i-1]的方案列；// 物品 i 放入背包的情况；</li>
+    </ul>
+  </li>
+  <li>两个方向上价值相等时，计算次序为：U、0/1/…/j-1</li>
+  <li>交互时不需考虑上标，如“3<sup>U</sup>”可直接输入“3U”</li>
+</ol>
+
+<h4 id="code参数">Code参数</h4>
+<ul>
+  <li>n - 物品数量；</li>
+  <li>W - 背包的最大承重量；</li>
+  <li>w - 物品重量输入；</li>
+  <li>v - 物品价值输入；</li>
+  <li>V - 最大价值矩阵，计算方向从上至下，从左向右；</li>
+  <li>x - 算法计算过程，记录各物品是否装入；</li>
+  <li>OptV - 当前最优解(最大价值)；</li>
+</ul>
+
+<h4 id="io">I/O</h4>
+<ul>
+  <li>Optimal value - 算法的最优解(最大价值)；</li>
+  <li>Optimal solution - 回溯获取最优方案
+    <ul>
+      <li>X - 最优解的物品组合；</li>
+    </ul>
+  </li>
+</ul>

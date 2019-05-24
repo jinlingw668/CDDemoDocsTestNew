@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Simple GitHub Code Sharing</title>
+    <!--<link rel="stylesheet" type="text/css" href="../../css/Basic.css">-->
+</head>
+<body>
+<div style="overflow: auto">
+    <h2 align="center">在WebStorm中进行GitHub上的简单源代码共享操作</h2>
+    <hr>
+    <h3>目录</h3>
+    <ul class="no_bullets">
+        <li><a href="#说明">说明</a> </li>
+        <li><a href="#提交Commit操作">提交(Commit)操作</a> </li>
+        <li><a href="#拉取Pull操作及冲突解决">拉取(Pull)操作及冲突解决</a> </li>
+        <li><a href="#推送Push操作">推送(Push)操作</a> </li>
+		<li><a href="#更新Update操作">更新(Update)操作</a> </li>
+    </ul>
+    <hr>
+    <h3 id='#说明'>说明</h3>
+    <ol>
+        <li>
+            GitHub及其所基于的Git系统提供了功能强大且很复杂的源代码共享功能，
+            是目前软件开发业界最为流行的VCS系统，Version Control System。
+            该系统的核心是源代码的分支(branch)与合并(merge)。
+            但本网页只介绍最简单的不创建分支的GitHub源代码共享操作。
+            主要说明在多人合作开发中，将源代码从GitHub拉到本地(pull)和将本地代码推送(push)到GitHub的操作。
+        </li>
+        <li>
+            使用Git进行代码共享的基本步骤是：<br>
+            提交(Commit)→拉取(Pull)(或更新(Update))→冲突解决(Resolve Confilts)→再提交(Cmmit)→推送(Push)
+        </li>
+    </ol>
+    <h3 id='#提交Commit'>提交(Commit)操作</h3>
+    <ol>
+        <li>Commit操作简单地说就是在本地形成一个关于代码的阶段性快照。</li>
+        <li>WebStorm中可以使用菜单(VCS→Commit)或(Ctrl+K快捷键)进行提交操作。</li>
+        <li>代码研发过程中，应经常执行Commit操作，以记录研发过程的阶段性，并为合作研发中的代码合并打下良好的基础。</li>
+        <li>
+            Commit操作对话框如下:<br>
+            <img src="/CD/imgCn/IDE/WebStorm/images/CommitDlg.png" style="width: calc(777px * 3 / 4)">
+        </li>
+        <li>
+            左侧项目树中以绿色标出新增的文件，以蓝色标示出修改的文件。
+        </li>
+    </ol>
+    <p>注：该对话框上面窗格中显示自上次提交以来发生了改变的文档。
+        其中的“Unversioned Files”列出了新加到系统中但尚未加入到VCS的文件，通常应该勾选将其加入到VCS。
+        在该窗格中选中一个文件，对话框下面的差别(Diff)窗格将以左(修改前)右(修改后)高亮对照的形式显示修改前后的对比。
+        对话框的中部是输入提交消息(Commit Message)的窗格。
+        每次提交都应该输入一段与本次代码修改有关的描述文字。
+        对话框右侧还提供了代码分析“Perform Code Analysis”功能，该项功能默认处于勾选状态。
+        点击提交按钮时，系统将提示代码分析的结果。
+        开发者应具备每次提交都应该保证代码没有错误的素养。
+        错误的代码如果推送到共享代码库，将会给其他团队成员带来巨大的麻烦。
+        鼠标右击左侧项目树中的文件或文件夹，再点击“Inspect Code”可以在代码编辑的任何时候对指定范围内中的代码进行检查。
+    </p>
+
+    <h3 id='#拉取Pull操作及冲突解决'>拉取(Pull)操作及冲突解决</h3>
+    <ol>
+        <li>Pull操作就是将GitHub上的代码版本，通常是团队研发中其他人更新(即推送，Push)了代码的版本，
+            拉取到本地，并与本地的代码进行合并。
+        </li>
+        <li>WebStorm中可以使用菜单(VCS→Git→Pull)进行拉取操作。</li>
+        <li>
+            Pull操作对话框如下：<br>
+            <img src="/CD/imgCn/IDE/WebStorm/images/PullDlg.png" style="width: calc(555px * 3 / 4)">
+            <ul>
+                <li>注：在进行拉取操作前，应先进行一次Commit操作。</li>
+            </ul>
+        </li>
+        <li>
+            点击对话框的“Pull”按钮，主窗体状态栏将显示Pull的进度。
+            如果本地文件和GitHub文件不一致，则将打开“File Merged with Conflicts”对话框：<br>
+            <img src="/CD/imgCn/IDE/WebStorm/images/ConfictingFiles.png" style="width: calc(750px * 3 / 4); ">
+            <ol type="I">
+                <li>对话框中给出了有冲突的文件列表。</li>
+                <li>右侧的“Accept Yours”和“Accept Theirs”按钮用于快速决定选定的冲突文件是使用您的本地版本还是GitHub版本。</li>
+                <li>
+                    如果不在该窗口上解决冲突，则可点击“Close”按钮。此后可以使用“VCS→Git→Resolve Conflicts”菜单
+                    再次打开“File Merged with Conflicts”对话框。
+                    <ul>
+                        <li>注：每次执行了Pull操作后，应该将所有的冲突均解决完后执行一次Commit操作，在开展其他的研发工作。</li>
+                    </ul>
+                </li>
+                <li>
+                    点击“Merge”按钮可以打开冲突解决对话框，如下图所示：<br>
+                    <img src="/CD/imgCn/IDE/WebStorm/images/ResolvingConflicts.png" style="width: calc(1223px * 3 / 4)">
+                    <ol type="i">
+                        <li>对话框以三栏式给出了选定文件的三个版本，即：
+                            左面的本地版“Your version”、中间的结果“Result”和右面的“Changes from server”
+                        </li>
+                        <li>
+                            左右两栏都以高亮的方式给出了发生冲突的代码。
+                        </li>
+                        <li>
+                           点击左侧或右侧冲突代码的“✖”按钮可以忽略(Ignore)该侧的冲突代码。
+                        </li>
+                        <li>
+                            点击左侧冲突代码的“《”按钮或右侧冲突代码的“》”按钮可以接受(Accept)该侧的冲突代码。
+                        </li>
+                        <li>将左右两侧所有各段冲突代码都进行了Accept或Ignore操作后，应该点击右下角的Apply按钮，认可冲突解决操作。</li>
+                        <li>窗口左下角给出了“Accept Left”和“Accept Right”按钮，它们用于快速地接受所有的本地或GitHub中的代码版本。</li>
+                    </ol>
+                </li>
+            </ol>
+        </li>
+    </ol>
+
+    <h3 id='推送Push'>推送(Push)操作</h3>
+    <ol>
+        <li>
+            Push操作就是将本地最后一次Commit的代码上传到GitHub上的共享代码库中，以便团队中的其他成员可以拉取并合并。
+        </li>
+        <li>WebStorm中可以使用菜单(VCS→Git→Push)或快捷键(Ctrl+Shift+K)进行拉取操作。</li>
+        <li>
+            Push操作对话框的左窗格给出提交情况，右窗格示出新增的文件(绿色)和修改的文件(兰色)，如下所示：<br>
+            <img src="/CD/imgCn/IDE/WebStorm/images/PushDlg.png" style="width: calc(731px * 3 / 4)">
+            <ul>
+                <li>注：在进行拉取操作前，一般要先进行一次Commit操作。</li>
+            </ul>
+        </li>
+        <li>点击Push按钮，主窗体状态栏将显示Push进度。
+            如果没有问题，则主窗体右下侧将给出成功的提示，信息如下：<br>
+            Push successful: Pushed 2 commits to origin/master.
+        </li>
+    </ol>
+    <ul>
+        <li>注：在Commit对话框上点击“Commit”按钮右侧的下拉箭头可以看到“Commit and Push”命令，
+            点击该命令系统将先执行Commit操作，然后打开“Push”对话框，以实现快速的Commit→Push操作。</li>
+    </ul>
+
+    <h3 id='#更新Update操作'>更新(Update)操作</h3>
+    <ol>
+        <li>
+            Update操作从简单意义上说等价于Pull操作。
+        </li>
+        <li>WebStorm中可以使用菜单(VCS→Update Project)或快捷键(Ctrl+)进行拉更新操作。</li>
+        <li>
+            Update操作对话框如下所示：<br>
+            <img src="/CD/imgCn/IDE/WebStorm/images/UpdateDlg.png" style="width: calc(460px * 3 / 4)">
+            <ul>
+                <li>注：在简单操作中，对话框的Update Type应选第1项Merge。</li>
+            </ul>
+        </li>
+        <li>点击OK按钮，主窗体状态栏将显示Update进度。</li>
+        <li>如果有冲突，则会像Pull操作那样打开“File Merged with Conflicts”(冲突)对话框，
+            接下来的操作参见Pull操作节。
+        </li>
+    </ol>
+</div>
+</body>
+</html>

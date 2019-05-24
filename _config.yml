@@ -1,0 +1,18 @@
+title: 计算机辅助的算法教学系统 (CAAIS)
+description: CAAIS算法描述及操作要领
+show_title: true
+show_downloads: true
+future: false
+#destination: ./CD/Docs/Cn
+#google_analytics:
+
+#baseurl: /_site
+#theme: jekyll-theme-slate
+permalink: /:categories/:title/
+theme: jekyll-theme-leap-day
+
+markdown: kramdown
+#markdown: redcarpet
+highlighter: rouge
+#highlighter: pygments
+

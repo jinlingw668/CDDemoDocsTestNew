@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Clone a GitHub Repository as a collaborator to local</title>
+    <!--<link rel="stylesheet" type="text/css" href="../../../css/Basic.css">-->
+</head>
+<body>
+<div style="overflow: auto">
+    <h2 align="center">以合作人身份克隆GitHub库到本地</h2>
+    <hr>
+    <h3>目录</h3>
+    <ul class="no_bullets">
+        <li><a href="#克隆操作">克隆操作</a> </li>
+        <li><a href="#在Windows资源管理器中查看克隆结果">在Windows资源管理器中查看克隆结果</a></li>
+        <li><a href="#在VS中打开克隆的解决方案">在VS中打开克隆的解决方案</a> </li>
+    </ul>
+    <hr>
+    <h3 id='#克隆操作'>克隆操作</h3>
+    <p> 当合作人(即被邀请人)接受邀请后，打开VS，将团队资源管理器转到“管理连接”页面：</p>
+    <img src="/CD/imgCn/IDE/VSCCPP/UsingGitHub/images/Clone_ConnectionPage.png" style="width: calc(693px / 1.8)"/>
+    <p>点击GitHub子面板中的“Clone”(克隆)可以打开“Clone a GitHub Repository”(克隆一个GitHub存储库)对话框，如下所示：</p>
+    <img src="/CD/imgCn/IDE/VSCCPP/UsingGitHub/images/CloneDialog.png" style="width: calc(806px / 1.8)"/>
+    <p>可以看出，对话框中按存储库的所有人(即创建人)列出了当前用户可以参与的存储库列表，
+        从上图可以看出当前用户可以参与RiverLenovo用户的Algorithms存储库。下面的Path框给出将要克隆到的本地文件夹。</p>
+    <p><b>注：</b>后面的红色惊叹号表示该文件夹不可用，一般是因为文件夹下有与存储库同名的文件夹所导致的。<br>
+   点击后面的“Browse”按钮选择或新建一个不含有Algorithms的文件夹，则最下面的“Clone”(克隆)按钮变为可用： </p>
+    <img src="/CD/imgCn/IDE/VSCCPP/UsingGitHub/images/CloneBrowse.png" style="width: calc(806px / 1.8)"/>
+    <p>点击“Clone”按钮，则团队资源管理器面板将显示克隆进度：</p>
+    <img src="/CD/imgCn/IDE/VSCCPP/UsingGitHub/images/CloneProgress.png" style="width: calc(682px / 2)"/>
+    <p>成功后，面板顶部显示“已成功克隆存储库”，在“本地GIT存储库”子面板中将显示新克隆的本地存储库：</p>
+    <img src="/CD/imgCn/IDE/VSCCPP/UsingGitHub/images/CloneSuccess.png" style="width: calc(696px / 2)"/>
+	
+    <h3 id='#在Windows资源管理器中查看克隆结果'>在Windows资源管理器中查看克隆结果</h3>
+    <p>右击新克隆的本地存储库，再点击快捷菜单中的“在文件资源管理器中打开”菜单项，
+        可以看到新克隆的存储库的主文件夹： </p>
+    <img src="/CD/imgCn/IDE/VSCCPP/UsingGitHub/images/ViewCloneResults.png" style="width: calc(1312px / 2)"/>
+	
+    <h3 id='#在VS中打开克隆的解决方案'>在VS中打开克隆的解决方案</h3>
+    <p>双击“本地GIT存储库”子面板中新克隆的本地存储库，面板将转到主页，并显示存储库中的解决方案，如下所示： </p>
+    <img src="/CD/imgCn/IDE/VSCCPP/UsingGitHub/images/LocalSoluSelect.png" style="width: calc(694px / 2)"/>
+    <p>双击解决方案名称，可在VS中打开解决方案，此后就可以对解决方案进行任何的VS开发操作：</p>
+    <img src="/CD/imgCn/IDE/VSCCPP/UsingGitHub/images/OpenCloneSoluInVS.png" style="width: calc(1728px / 2)"/>
+</div>
+</body>
+</html>

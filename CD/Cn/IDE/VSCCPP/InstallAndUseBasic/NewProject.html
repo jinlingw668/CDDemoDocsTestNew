@@ -1,0 +1,109 @@
+---
+layout: default
+tags:
+  - VS2017
+categories:
+  - VS2017
+permalink: CD/Cn/IDE/VSCCPP/InstallAndUseBasic/NewProject
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>New project of Hello World</title>
+    <!--<link rel="stylesheet" type="text/css" href="../../../css/Basic.css">-->
+</head>
+<body>
+<div style="overflow: auto">
+    <h2 align="center">新建VC项目</h2>
+    <hr>
+    <h3>目录</h3>
+    <ul class="no_bullets">
+        <li><a href="#新建项目">新建项目</a> </li>
+        <li><a href="#打开最近的项目">打开最近的项目</a> </li>
+        <li><a href="#创建新的VC空项目">创建新的VC空项目</a> </li>
+        <li><a href="#编写Hello-World！程序">编写Hello World！程序</a> </li>
+        <li><a href="#修改运行结果窗口的前背景颜色">修改运行结果窗口的前背景颜色</a> </li>
+    </ul>
+    <hr>
+    <h3 id='#新建项目'>新建项目</h3>
+    <p>点击“起始页”中“新建项目”下的“创建新项目”可以进入创建新项目的向导流程。</p>
+    <h3 id='OpenRecentProjects'>打开最近的项目</h3>
+    <p>在“起始页”的“最近”栏目下列着最近打开的项目，点击其中的项目名称可以快速地打开最近的某个项目。</p>
+    <h3 id='#创建新的VC空项目'>创建新的VC空项目</h3>
+    <p>进行基本的C程序练习可以从创建空项目开始，这样可以使新手快速地书写自己的代码，
+        避免因理解和结合由模板生成的基本文件给新手带来的困难。</p>
+    <p><b>注意：</b>熟练的开发者用VS或其他开发环境编写真正的应用程序一般都要选择适宜的模板开展工作，
+        VS提供了很多可以节省创建大型项目时间的模板。</p>
+    <ol>
+        <li>
+            点击VS主界面起始页中的“创建新项目”，或“文件”主菜单“新建”子菜单下的“项目”，打开“新建项目”对话框，
+            如下所示（确保左侧模板树中选中Visual C++结点）：<br>
+            <img src="{{'/CD/imgCn/IDE/VSCCPP/InstallAndUseBasic/images/CreatNewProject.png' | relative_url }}" style="width: calc(941px / 1.2)"/>
+        </li>
+        <li>
+            选中“空项目”模板。
+        </li>
+        <li>
+            在下部的名称中输入一个有意义的名称，如Algorithms，解决方案名称保持系统默认的项目名称，位置最好修改为非C盘上的某个路径，如：<br>
+            <pre><code>    >D:\VCPRjs</code></pre>
+        </li>
+        <li>保持右下角的“为解决方案创建目录”处在选中状态。</li>
+        <li>
+            点击“确定”按钮，则VS将打开如下所示的空项目初始界面：<br>
+            <img src="{{'/CD/imgCn/IDE/VSCCPP/InstallAndUseBasic/images/InitialScreen.png' | relative_url }}" style="width: calc(845px / 1.2)"/>
+        </li>
+    </ol>
+    <h3 id='#编写Hello-World！程序'>编写Hello World！程序</h3>
+    <ol>
+        <li>
+            在此前新建的Algorithms项目上点击右键，依次点击添加、新建项菜单：<br>
+            <img src="{{'/CD/imgCn/IDE/VSCCPP/InstallAndUseBasic/images/AddNewItem.png' | relative_url }}" style="width: calc(837px / 1.2)"/></li>
+        <li>
+            在打开的添加新项对话框中保持“C++文件(.cpp)”类别处在选中状态，在下面的名称框中输入“main.cpp”：<br>
+            <img src="{{'/CD/imgCn/IDE/VSCCPP/InstallAndUseBasic/images/MainCpp.png' | relative_url }}" style="width: calc(840px / 1.2)"/></li>
+        <li>
+            点击右下角的“添加”按钮，VS将自动进入main.cpp的编程界面：<br>
+            <img src="{{'/CD/imgCn/IDE/VSCCPP/InstallAndUseBasic/images/OpenMainCpp.png' | relative_url }}" style="width: calc(837px / 1.2)"/><br>
+            <b> 注意：</b>从左侧的解决方案资源管理器中可以看出，VS自动将main.cpp归到“源文件”类别中。
+        </li>
+        <li>
+            为main.cpp输入如图所示的代码：<br>
+            <img src="{{'/CD/imgCn/IDE/VSCCPP/InstallAndUseBasic/images/EditMainCpp.png' | relative_url }}" style="width: calc(872px / 1.25)"/><br>
+            <b>注意：</b>使用getchar()函数避免结果窗口一闪而过。
+        </li>
+        <li>
+            点击工具栏中部的绿色运行箭头（即“本地Windows调试器”）按钮，可打开如下所示的提示框：<br>
+            <img src="{{'/CD/imgCn/IDE/VSCCPP/InstallAndUseBasic/images/RunAlertDialog.png' | relative_url }}" height="355" width="345"/><br>
+            <b>注意：</b>该提示框在大部分情况下没有必要，因此可勾选底部的“不再显示此对话框”复选框，使其下次不再显示。
+        </li>
+        <li>
+            点击上述对话框中的“是”按钮，VS下部的输出框中将显示编译信息，如果没有错误，
+            则输出将显示在如下所示的黑色背景的运行结果窗口中：<br>
+            <img src="{{'/CD/imgCn/IDE/VSCCPP/InstallAndUseBasic/images/ComWinRunResult.png' | relative_url }}" height="124" width="427"/><br>
+            <b>注意：</b> 如果程序有错误，VS将在输出窗口中显示错误信息及所在的行。
+            根据编译报告的错误信息对程序进行改正是编写程序最重要的基本功之一，学生应通过大量的程序练习、查错、改错等提高
+            调试自己的能力。VS所提供的错误报告及查、排错功能被编程界公认为是最好的，因而对初学者来讲是一个最合适的编程环
+            境，应该好好下功夫掌握和使用。
+        </li>
+    </ol>
+    <h3 id='#修改运行结果窗口的前背景颜色'>修改运行结果窗口的前背景颜色</h3>
+    <p>运行结果窗口默认的黑色背景视觉效果很不好，可以通过对其配置进行改善。</p>
+    <ol>
+        <li>
+            右击窗口顶部的标题栏：<br>
+            <img src="{{'/CD/imgCn/IDE/VSCCPP/InstallAndUseBasic/images/ComWinTitile.png' | relative_url }}" style="width: calc(424px / 1.1)"/></li>
+        <li>
+            在打开的菜单中点击属性打开属性窗口，转到颜色选项卡：<br>
+            <img src="{{'/CD/imgCn/IDE/VSCCPP/InstallAndUseBasic/images/ColorSelectDialog.png' | relative_url }}" style="width: calc(453px / 1.2)"/><br>
+            将屏幕背景设为较柔和的绿色（红绿蓝为0、96、0），屏幕文字设为有较好对比度的青色（红绿蓝为0、240、255）。<br><br>
+            同时，可以将弹出窗口背景设为接近白色（红绿蓝为240、240、240），弹出文字设为有较好对比度的品红色
+            （红绿蓝为128、0、128）。<br><br>
+            <b>注：</b>VS将记住上述设置，下次启动VS运行Algorithm项目，运行结果窗口将保持上述设置：<br>
+            <img src="{{'/CD/imgCn/IDE/VSCCPP/InstallAndUseBasic/images/ComWinGreen.png' | relative_url }}" height="124" width="427"/>
+        </li>
+    </ol>
+</div>
+</body>
+</html>

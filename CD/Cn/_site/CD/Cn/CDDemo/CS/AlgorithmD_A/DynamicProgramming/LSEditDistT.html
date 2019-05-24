@@ -1,0 +1,30 @@
+<h3 id="levenstein-编辑距离算法描述"><center>Levenstein 编辑距离算法描述</center></h3>
+<div align="right">
+	<a href="/CD/Cn/CDDemo/CS/QandA.html" target="_blank">Q&amp;A</a>
+    &nbsp;&nbsp;
+	<a href="/CD/Cn/" target="_blank">Home</a>		
+</div>
+<hr />
+<h4 id="问题描述">问题描述</h4>
+
+<p>两个字符串的编辑距离，又称为Levenshtein距离，是指利用字符操作，把字符串A转换成字符串B所需要的最少操作数。其中，字符操作是指对单个字符的插入、删除、替换3种操作。</p>
+
+<p>编辑距离：给定两个字符串A和B，求字符串A至少经过多少步字符操作变成字符串B。</p>
+
+<h4 id="算法思想">算法思想</h4>
+
+<p>每一次只考虑字符串 A 的前 i 个字符 ( 即第 1,2,3,…i 个字符，1≤i≤lenA )；
+而每次考虑 A 的前 i 个字符时，均对字符串 B 的前 j 个字符 (即第 1,2,3,…j个字符，1≤j≤lenB) 一步步考虑。
+由此定义一个二维数组 Edit(i,j) 表示当前字符串 A[1,…i]变为B[1,…j] 的最小编辑距离。</p>
+
+<p>对于每一项 Edit[i][j] 的计算，考虑 A 串的第 i 个字符和 B 串的第 j 个字符</p>
+
+<p>如果相等，即A[i] = B[j]，则只需计算A[1,…i-1]和B[1,…j-1]之间的距离，即Edit(i-1, j-1)；</p>
+
+<p>如果不相等，有3种操作方案，取最优方案即可：</p>
+<ul>
+  <li>将B的第j个字符，插入到A的第i个字符之前，插入操作使得Edit+1，之后再计算Edit[i-1][j]，即Edit[i-1][j]+1；</li>
+  <li>将B的第j个字符删除，删除操作使得Edit+1，之后再计算Edit[i][j-1]，即Edit[i][j-1]+1；</li>
+  <li>将A的第i个字符替换为B的第j个字符，替换操作使得Edit+1，之后再计算Edit[i-1][j-1]，即Edit[i-1][j-1]+1；</li>
+</ul>
+

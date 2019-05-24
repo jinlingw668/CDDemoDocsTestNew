@@ -1,0 +1,148 @@
+---
+layout: page
+tags:
+  - CAAIS
+categories:
+  - Help
+permalink: CD/Cn/CDDemo/CS/Help
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title >CAAIS 操作简介</title>
+<!--    <link rel="stylesheet" type="text/css"  href="../css/Basic.css">
+    <script type="text/javascript" src="../js/openlinks.js"></script>-->
+</head>
+<body>
+<div style="overflow: auto">
+    <h2 align="center">CAAIS 操作简介</h2>
+    <div align="right">
+            <a href="./QandA.html" style="text-decoration:underline;">Q&amp;A</a>
+            &nbsp;&nbsp;
+            <!--<li><a href="https://riverwalter.github.io/CDDemoDocs/" target="_blank">CS Dream Docs Home</a></li>-->
+			<a href="{{ '/CD/Cn/' | relative_url }}" style="text-decoration:underline;">Home</a>
+			&nbsp;
+            <a href="{{ '/CD/Cn/' | relative_url }}" target="_blank" title="Home in new Window" style="font-size:14px;font-weight: bolder">⮵</a>
+    </div>
+    <hr>
+    <h3>目录</h3>
+    <ul class="no_bullets">
+        <li><a href="#操作简介与QA">操作简介与Q&amp;A</a> </li>
+        <li><a href="#系统演示入口">系统演示入口</a> </li>
+        <li><a href="#工具栏可收起">工具栏可收起</a> </li>
+        <li><a href="#数字串生成">数字串生成</a>
+            <ul type="none">
+                <li><a href="#“典型”下拉框">“典型”下拉框</a></li>
+                <li><a href="#“输入”对话框">“输入”对话框</a> </li>
+            </ul>
+        </li>
+        <li><a href="#场景设置">场景设置</a> </li>
+        <li><a href="#演示场景">演示场景</a> </li>
+        <li><a href="#交互场景">交互场景</a>
+            <ul type="none">
+                <li><a href="#成绩保存">成绩保存</a></li>
+                <li><a href="#成绩管理">成绩管理</a> </li>
+            </ul>
+        </li>
+        <li><a href="#布局控制">布局控制</a> </li>
+    </ul>
+    <hr>
+
+    <h3 id="#操作简介与QA">操作简介与Q&amp;A</h3>
+    <p> 系统登录后，右侧Help页默认加载“CAAIS 操作简介”，点击“Q&A”可切换，如下图所示。</p>
+
+	<img src="{{'/CD/imgCn/CDDemo/CS/images/Introduction01.png' | relative_url }}" style="width: calc(929px /1.1)"/>	
+
+    <p>“CAAIS Q&A”，记录系统常见问题，如下图所示。点击“操作简介”可切换回去。  </p>
+    <img src="{{'/CD/imgCn/CDDemo/CS/images/Introduction02.png' | relative_url }}" style="width: calc(929px /1.1)"/>
+	
+    <h3 id="#系统演示入口">系统演示入口</h3>
+    <p> 系统登录后，将处在“功能”选项卡，该选项卡包括“修改密码”和“查看分数”两个功能。切换到“演示”选项卡后，界面如下图所示：</p>
+    <img src="{{'/CD/imgCn/CDDemo/CS/images/algSelected.png' | relative_url }}" style="width: calc(1109px /1.1)"/>
+    <p> 双击“演示”选项卡中的一个算法，将打开算法的演示操作窗口。下图为“冒泡排序算法”的演示操作界面： </p>
+    <img src="{{'/CD/imgCn/CDDemo/CS/images/wholeInterface.png' | relative_url }}" style="width: calc(1256px /1.1)"/>
+    <p><b>注意：</b>不同算法的演示页面中，演示区的呈现方式可能不同，配置工具栏的参数设置也可能不同</p>
+
+    <h3 id="#工具栏可收起">工具栏可收起</h3>
+    <p> 点击配置工具栏下方的分隔条，可收起或打开工具栏窗口，以增加演示空间，如下图所示： </p>
+    <img src="{{'/CD/imgCn/CDDemo/CS/images/configureToolBarUp.png' | relative_url }}" style="width: calc(1259px /1.1)"/>
+    <img src="{{'/CD/imgCn/CDDemo/CS/images/configureToolBarDown.png' | relative_url }}" style="width: calc(1258px /1.1)"/>
+    <p>另，系统标题栏也可收起，如下图所示</p>
+    <img src="{{'/CD/imgCn/CDDemo/CS/images/titleBarUp.png' | relative_url }}" style="width: calc(929px /1.1)"/>
+
+    <h3 id="#数字串生成">数字串生成</h3>
+    <p> 支持“随机”、“典型”、“输入”三种方式，以及对生成数串进行“等值”、“升序”、“降序”预处理。 </p>
+    <img src="{{'/CD/imgCn/CDDemo/CS/images/numsGenerator.png' | relative_url }}" style="width: calc(702px /1.1)"/><br>
+    <p> 随机方式：点击“随机”按钮，系统会根据“个数”设置，生成一组随机数字串</p>
+
+    <h4 id="#“典型”下拉框">“典型”下拉框</h4>
+    <p> 内含算法的部分经典教材实例 </p>
+    <img src="{{'/CD/imgCn/CDDemo/CS/images/typicalNums01.png' | relative_url }}" style="width: calc(696px /1.1)"/><br>
+    <p> 选定后，典型数据会自动加载至数字串的文本框中，如下图 </p>
+    <img src="{{'/CD/imgCn/CDDemo/CS/images/typicalNums02.png' | relative_url }}" style="width: calc(693px /1.1)"/>
+    <p><b>注意：</b>点击“典型”标签，可将典型数据再次加载到数字串的文本框中（适用于文本框数据改变后，再次使用已选典型数据的情况）</p>
+
+    <h4 id="#“输入”对话框">“输入”对话框</h4>
+    <p> 维护自定义数字串，列表会保存至用户数据中；可选定自定义数字串以加载演示</p>
+    <img src="{{'/CD/imgCn/CDDemo/CS/images/inputNums.png' | relative_url }}" style="width: calc(651px /1.1)"/><br>
+    <p> 对话框打开后，默认为首行记录的编辑状态<br></p>
+    <p>   新增：点击“新增”按钮，按提示要求输入数字串后，点击“保存”。<b>注意：</b>逗号应使用英文字体<br></p>
+    <p>   编辑：选定记录行（默认进入编辑状态），对文本框数据修改后，点击“保存”<br></p>
+    <p>   删除：选定记录行，点击“删除”，【确认对话框】中点击确认，完成删除。<b>注意：</b>删除后，数据记录不可恢复<br></p>
+    <p>   选定：选定记录行，点击“选定”，数字串加载至演示页面的数字串文本框<br></p>
+    <p>   <b>注意：</b>不同算法的“输入”对话框可能不同。 <br></p>
+
+    <h3 id="#场景设置">场景设置</h3>
+        <img src="{{'/CD/imgCn/CDDemo/CS/images/demoSettings.png' | relative_url }}" style="width: calc(772px /1.1)"/><br>
+    <p> 历史显示：设置演示区中历史数据是否淡化显示、以及倒序\正序显示<br></p>
+    <p> 字号：设置演示字体的字号，L: 大、M: 中、S: 小，三种可选<br></p>
+    <p> 交互：设置演示的交互行比例，可选择“无”（演示场景）或者10~60%（交互场景）<br></p>
+    <p> 速度：设置演示动画的运行速度，Quick: 快、Slow: 慢、Off: 关闭（即off表示关闭演示动画）<br></p>
+    <p> 彩色前景：设置演示区数据是否添加彩色前景<br></p>
+    <p> <b>注意：</b>演示设置完成后，需要点击“更新”以应用演示设置</p>
+
+    <h3 id="#演示场景">演示场景</h3>
+    <p> 操作：“交互”设置为“无”，点击“更新”，之后使用播放按钮控制演示进度，如下图所示。<br></p>
+    <p> 演示进行时，右侧窗口的步骤解说、参数取值、代码指示也会实时更新。<br> </p>
+    <img src="{{'/CD/imgCn/CDDemo/CS/images/algoDemos.png' | relative_url }}" style="width: calc(1255px /1.1)"/>
+    <p> 其中，播放按钮分别表示单步、单趟、全部、暂停、重置、计分保存（交互场景使用）。如下图所示<br></p>
+    <img src="{{'/CD/imgCn/CDDemo/CS/images/toolDemos.png' | relative_url }}" style="width: calc(208px /1.1)"/>
+    <p><b>注意</b>：播放按钮支持Tab\Enter 键组合控制演示进度（Tab键后向切换、Shift+Tab前向切换、Enter键确认按钮）；按钮图标使用下划线标识光标位置，如上图的
+    <img src="{{'/CD/imgCn/CDDemo/CS/images/toolDemosCursor.png' | relative_url }}" style="width: calc(33px /1.1)"/></p>
+
+    <h3 id="#交互场景">交互场景</h3>
+    <p> 操作：“交互”设置为10~60%，点击“更新”，之后使用播放按钮控制演示进度。<br></p>
+    <p> 交互设置：系统根据交互比例自动计算交互行数，交互行、交互区随机选定。<br></p>
+    <p> 交互方式：以文本框输入方式进行，完成后点击交行尾处的提交按钮，系统自动评判计分，如下图所示<br></p>
+    <p> <b>注意</b>：交互行的文本框、提交按钮，同样支持Tab\Enter键操作，并且可以与播放控制按钮配合使用（即在“提交”按钮处，Tab键可继续切换至播放控制按钮）<br></p>
+    <img src="{{'/CD/imgCn/CDDemo/CS/images/algoTest.png' | relative_url }}" style="width: calc(1253px /1.1)"/>
+    <p> 数字标记：演示区右上处的数字分别表示交互的得分/总分、交互行的已出数/总数，演示的步骤总数，如下图所示</p>
+    <img src="{{'/CD/imgCn/CDDemo/CS/images/toolTest.png' | relative_url }}" style="width: calc(674px /1.1)"/>
+    <p class="QandA"> 具体如下：<br>
+        13/14：表示交互空格总数14，交互正确数13，记为13/14<br>
+        3/10：表示交互总行数10，目前已经弹出3行，记为3/10<br>
+        29：表示算法的步骤总数为29<br>
+    </p>
+
+    <h4 id="#成绩保存">成绩保存</h4>
+    <p>算法交互测试完成后，点击下图所示的“save score”按钮，可保存交互记录。<br></p>
+    <p>暂时支持同一交互的多次保存。<br></p>
+    <img src="{{'/CD/imgCn/CDDemo/CS/images/toolSaveScores.png' | relative_url }}" style="width: calc(201px /1.1)"/>
+
+    <h4 id="#成绩管理">成绩管理</h4>
+    <p>如下图所示，点击“查看分数”，可打开成绩列表。<br></p>
+    <p> 列表右键操作支持刷新、删除、清空。其中，删除可用于清理重复、失误的记录行。<br></p>
+    <img src="{{'/CD/imgCn/CDDemo/CS/images/scoresManage.png' | relative_url }}" style="width: calc(864px /1.1)"/>
+
+    <h3 id="#布局控制">布局控制</h3>
+    <p>控制演示区"播放按钮"、“原始行”的显示与隐藏，可实时更新 </p>
+    <img src="{{'/CD/imgCn/CDDemo/CS/images/LayoutBars.png' | relative_url }}" style="width: calc(694px /1.1)"/><br>
+    <p>“原始行”的隐藏\显示控制，可有效利用演示空间，尤其在树、图、网格等步骤行较高的算法演示中更为明显。</p>
+    <p> 例如，棋盘覆盖算法的原始行显示及隐藏，如下图所示<br></p>
+    <img src="{{'/CD/imgCn/CDDemo/CS/images/LayoutWorks.png' | relative_url }}" style="width: calc(1586px /1.1)"/>
+    <img src="{{'/CD/imgCn/CDDemo/CS/images/LayoutWorks01.png' | relative_url }}" style="width: calc(1586px /1.1)"/>
+</div>
+</body>
+</html>

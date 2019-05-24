@@ -1,0 +1,61 @@
+<h3 id="子集遍历算法-demo-操作要领"><center>子集遍历算法 Demo 操作要领</center></h3>
+<div align="right">
+	<a href="/CD/Cn/CDDemo/CS/QandA.html" target="_blank">Q&amp;A</a>
+    &nbsp;&nbsp;
+	<a href="/CD/Cn/" target="_blank">Home</a>			
+</div>
+<hr />
+<h4 id="演示设置">演示设置</h4>
+
+<ol>
+  <li>使用Call Stack记录算法递归调用的栈信息，以“No：( #Loc, n )”的形式
+    <ul>
+      <li>No - 对应演示步骤No；</li>
+      <li>#Loc - 子函数调用的return point 返回点，以便返回后继续执行；
+        <ul>
+          <li>Loc标识代码行；</li>
+          <li>#Loc标识代码行地址；</li>
+        </ul>
+      </li>
+      <li>n - 子函数调用的参数取值；</li>
+    </ul>
+  </li>
+  <li>使用 Output 标识算法的子集输出，以”cnt：s ; { subset } “的形式
+    <ul>
+      <li>cnt - 子集计数；</li>
+      <li>s - 子集标识数组；</li>
+      <li>{ subset } - 子集内容；</li>
+    </ul>
+  </li>
+  <li>例如 n = 4 时
+    <ul>
+      <li>02: (#11,3)
+        <ul>
+          <li>栈顶对应步骤No2，子函数Subsetting(3)的返回点，是其#11代码行；</li>
+        </ul>
+      </li>
+      <li>08: (#11,3)(#11,2)(#11,1)(#11,0)
+        <ul>
+          <li>栈顶(#11,0)对应步骤No8，Subsetting(0) 输出第1个子集“01: 0000; {}”；</li>
+        </ul>
+      </li>
+      <li>10: (#11,3)(#11,2)(#11,1)(#14,0)
+        <ul>
+          <li>栈顶(#11,0)对应步骤No10，Subsetting(0) 输出第2个子集“02: 1000; {1}”；</li>
+        </ul>
+      </li>
+      <li>14: (#11,3)(#11,2)(#14,1)
+        <ul>
+          <li>栈顶(#14,1)对应步骤No14，Subsetting(1)的返回点，是其#14代码行；</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="code参数">Code参数</h4>
+<ul>
+  <li>n - 子集遍历规模，取值3 ~ 6；</li>
+  <li>s - 子集标识数组，0标识不包含，1标识包含；</li>
+  <li>cnt - 子集计数；OutputOneSubsetBinary()内定义；</li>
+</ul>

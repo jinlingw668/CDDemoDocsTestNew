@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Login to GitHub</title>
+    <!--<link rel="stylesheet" type="text/css" href="../../css/Basic.css">-->
+</head>
+<body>
+<div style="overflow: auto">
+    <h2 align="center">配置WebStorm访问GitHub</h2>
+	<hr>
+    <ol>
+        <li>
+            在启动后的Welcome界面上点击“Check out from Version Control”下拉列表中的Git:<br>
+            <img src="/CD/imgCn/IDE/WebStorm/images/ChooseGit.png" style="width: calc(1338px / 4)"><br>
+            系统将自动打开“Clone Repository”对话框：<br>
+            <img src="/CD/imgCn/IDE/WebStorm/images/CloneRepo1.png" style="width: calc(742px / 2)"><br>
+            <b>注：</b>如果已经进入了WebStorm的主界面，则可以点击VCS主菜单下“Checkout from Version Control”的“Git”子菜单打开“Clone Repository”对话框：<br>
+            <img src="/CD/imgCn/IDE/WebStorm/images/OpenGitCloneFromMenu.png" style="width: calc(742px / 2)">
+        </li>
+        <li>
+            点击“Clone Repository”对话框中的“Log in to GitHub”，打开“Log in to GitHub”对话框:<br>
+            <img src="/CD/imgCn/IDE/WebStorm/images/LoginToGitHub1.png" style="width: calc(1020px * 0.4)"><br>
+            选择“Auth Type”中的“Password”，并输入账户和口令：<br>
+            <img src="/CD/imgCn/IDE/WebStorm/images/LoginToGitHub2.png" style="width: calc(1020px * 0.4)">
+        </li>
+        <li>
+            点击“Login”按钮，如果账户、口令和网络没有问题，则返回“Clone Repository”对话框，
+            可在该对话框的URL框中输入待签出（checkout，即下载到本地）的GitHub库的地址，
+            在“Directory”框中输入本地的存储文件夹:<br>
+            <img src="/CD/imgCn/IDE/WebStorm/images/CloneRepo2.png" style="width: calc(742px / 2)"><br>
+            点击“Clone”按钮，系统将显示签出（checkout）进度条，完成后询问是否打开本地文件夹：<br>
+            <img src="/CD/imgCn/IDE/WebStorm/images/OpenLocalDir.png" style="width: calc(750px / 2)">
+        </li>
+        <li>
+            点击“Yes”按钮则会打开WebStorm的主窗体，左侧的Project窗格中将显示代码库的文件夹和文件树，
+            双击一个文件夹，可以在右侧的工作窗格中打开以便浏览和编辑:<br>
+            <img src="/CD/imgCn/IDE/WebStorm/images/MainWin0.png" style="width: calc(1590px / 2)">
+        </li>
+    </ol>
+</div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<h3 id="levenstein-编辑距离算法-demo-操作要领"><center>Levenstein 编辑距离算法 Demo 操作要领</center></h3>
+<div align="right">
+	<a href="/CD/Cn/CDDemo/CS/QandA.html" target="_blank">Q&amp;A</a>
+    &nbsp;&nbsp;
+	<a href="/CD/Cn/" target="_blank">Home</a>		
+</div>
+<hr />
+
+<h4 id="演示设置">演示设置</h4>
+
+<ol>
+  <li>使用e<sup>p</sup>标识距离和方向，其中p的值说明如下：
+    <ul>
+      <li>U - 从上方计算来的e；</li>
+      <li>L - 从左侧计算来的e；</li>
+      <li>0 - 从左上计算来的e，对应x[i]与y[j]字符相同的情况；</li>
+      <li>1 - 从左上计算来的e，对应x[i]与y[j]字符不同的情况；</li>
+    </ul>
+  </li>
+  <li>两个或三个方向上距离值相等时，计算次序为：U、L、0/1。</li>
+  <li>交互时不需考虑上标，如“3<sup>U</sup>”可直接输入“3U”。</li>
+  <li>“ε”符号表示空串，借用自计算理论。</li>
+</ol>
+
+<h4 id="code参数">Code参数</h4>
+<ul>
+  <li>x - 输入字符串；</li>
+  <li>y - 输入字符串；</li>
+  <li>m - x的字符串长度；</li>
+  <li>n - y的字符串长度；</li>
+  <li>E - 最小距离矩阵，计算方向从上至下，从左向右；</li>
+  <li>P - 记录矩阵各距离值的计算来源；</li>
+  <li>xe - 字符串x的最优对准；</li>
+  <li>ye - 字符串y的最优对准；</li>
+</ul>
+
+<h4 id="io">I/O</h4>
+
+<ul>
+  <li>Optimal distance - 最优解(最小距离)；</li>
+  <li>Optimal solution - 回溯获取最优解决方案
+    <ul>
+      <li>xe, ye - 最优解的字符串对准；</li>
+    </ul>
+  </li>
+</ul>
